@@ -18,20 +18,7 @@ A full-stack online learning platform enabling users to enroll in courses, watch
 | ------------- | ----------------------- | ------------------------------------------- |
 | Frontend      | React.js, Tailwind CSS, React Router | Building responsive UI and routes           |
 | Backend       | Node.js, Express.js     | RESTful APIs and business logic            |
-| Database      | Supabase (PostgreSQL) or MongoDB | Data storage and authentication             |
+| Database      | MongoDB                 | Data storage and authentication             |
 | Authentication| JWT or Supabase Auth    | Secure login and user management            |
-| Payment       | Stripe / Razorpay       | Handle course purchases                      |
+| Payment       | Razorpay                | Handle course purchases                      |
 | Deployment    | Vercel (Frontend), Render/Railway (Backend) | Hosting and continuous deployment |
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 16+ installed
-- Supabase account and project (if using Supabase)
-- Stripe or Razorpay account (for payment functionalities)
-
-### Installation
-
-1. Clone the repository
-
