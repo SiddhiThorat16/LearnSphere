@@ -3,6 +3,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db'); // database connection module
+const authRoutes = require('./routes/authRoutes');
 
 dotenv.config();
 
@@ -13,6 +14,10 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 app.use(express.json());
+
+// Register authentication routes
+app.use('/auth', authRoutes);
+
 
 // Example route
 app.get('/', (req, res) => {
