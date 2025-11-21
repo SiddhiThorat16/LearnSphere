@@ -4,6 +4,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db'); // database connection module
 const authRoutes = require('./routes/authRoutes');
+const courseRoutes = require('./routes/courseRoutes');
 
 dotenv.config();
 
@@ -17,6 +18,9 @@ app.use(express.json());
 
 // Register authentication routes
 app.use('/auth', authRoutes);
+
+// new course routes
+app.use('/courses', courseRoutes);
 
 
 // Example route
