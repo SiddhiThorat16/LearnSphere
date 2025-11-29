@@ -16,15 +16,21 @@ const courseSchema = new mongoose.Schema(
       minlength: 10 // Minimum description length
     },
     instructor: {
-      type:mongoose.Schema.Types.ObjectId,
-      required: true
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',           // add this
+      required: true,
     },
     videoLinks: [
       {
         type: String,
         trim: true
       }
-    ]
+    ],
+    price: { 
+      type: Number, 
+      required: true, 
+      default: 0 
+    },
   },
   {
     timestamps: true // Automatically adds createdAt and updatedAt fields
